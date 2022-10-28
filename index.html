@@ -1,196 +1,365 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-10-28 22:32:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/28/hello-world/" class="article-date">
-  <time datetime="2022-10-28T13:07:44.774Z" itemprop="datePublished">2022-10-28</time>
-</a>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/10/28/hello-world/" title="Hello World"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/10/28/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-28T13:07:44.774Z" title="Created 2022-10-28 21:07:44">2022-10-28</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+More info: Writing
+Run server1$ hexo server
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+More info: Server
+Generate static files1$ hexo generate
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/28/hello-world/" data-id="cl9siotd10000d4uqdhmw3ooc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/10/28/%E9%97%AD%E5%8C%85/" title="闭包"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闭包"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/10/28/%E9%97%AD%E5%8C%85/" title="闭包">闭包</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-28T04:00:00.000Z" title="Created 2022-10-28 12:00:00">2022-10-28</time></span></div><div class="content">闭包前端的默认行为之一， 
+只有函数内部的子函数·才能读取局部变量，所以闭包可以理解为定义在一个函数内部的函数
+子函数使用父函数变量的行为
+1234567function a() &#123;	var leo =1 ;	 function b() &#123;		alert(leo);	 &#125;;&#125;;      b();
 
 
-  
+
+延长父函数变量的生命周期
+js定义的全局变量不会被回收
+1234567function a() &#123;	var leo =1 ;	 function b() &#123;		alert(leo);// 被调用之后，leo的生命周期延长	 &#125;;       b();&#125;;
+
+拓展了父函数的空间
+环境和作用域环境被存在的价值是被需要，当不需要的时侯被销毁
+作用范围===作用域
+类比城市(全局环境) 城市中的公园学校(函数作用域)，当这个作用域没有被使用，就会被销毁，当城市无人使用(如浏览器关闭)，全局被销毁。
+   
+函数的环境和作用域12345function show() &#123;	let url = &quot;h& ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/10/16/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/10/16/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-16T09:15:52.045Z" title="Created 2022-10-16 17:15:52">2022-10-16</time></span></div><div class="content">早期创建方式1`var` `obj = ``new` `Object()``obj.name =``&#x27;xxx&#x27;``obj.age = 18``或使用对象字面量``var` `o1 = &#123;`` ``name: ``&#x27;xxx&#x27;``,`` ``say: () =&gt; &#123;&#125;``&#125;``var` `o2 = &#123;`` ``name: ``&#x27;xxx&#x27;``,`` ``say: () =&gt; &#123;&#125;``&#125;`
+
+缺点：使用同一个接口创建很多对象，会产生大量重复代码
+工厂模式1`function` `factory(name,age) &#123;`` ``var` `obj = ``new` `Object()`` ``obj.name = name`` ``obj.age = age`` ``return` `obj``&#125;``var` `o1 = factory(1, 11)``var` `o2 = factory(2, 22)`
+
+优点：解决了创建多 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/07/01/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/01/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-07-01T15:14:21.827Z" title="Created 2022-07-01 23:14:21">2022-07-01</time></span></div><div class="content">深度理解for循环的作用域for循环中var（只有函数作用域和全局作用域）1、基础循环
+12345for(var i = 0;i &lt; 5; i++)&#123;	console.log(i)&#125;//输出为01234//for循环每次循环执行一次，输出当前作用域下i的值
+
+2、添加异步
+12345678for(var i =0;i &lt; 5;i++)&#123;	setTimeout(()=&gt;&#123;console.log(i)&#125;)&#125;//输出为55555/*for的每次循环都是同步执行，遇到了setTimeout宏任务定时器，进入异步队列回调函数不执行，便先执行了5次的++for循环是同步语句当执行完毕，开始执行积压了5次的异步的setTimeout，这时作用域下的i是5便输出了55555*/
+
+for循环中let（块级作用域{}中）1、基础循环
+123for (let i = 0;i &lt; 5; i++)&#123;	console.log(i)&#125;// 01234
+
+2、添加异步
+1234567for (let i = 0; ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/06/18/dom0%E7%BA%A7%E5%92%8C2%E7%BA%A7%E4%BA%8B%E4%BB%B6/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/06/18/dom0%E7%BA%A7%E5%92%8C2%E7%BA%A7%E4%BA%8B%E4%BB%B6/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-06-18T06:53:40.079Z" title="Created 2022-06-18 14:53:40">2022-06-18</time></span></div><div class="content">DOM0和DOM2级事件事件绑定的两种方法DOM0级事件绑定curEle.onclick=function(){};
+DOM2级事件绑定标准浏览器：curEle.addEventListener(‘click’,function(){},false)IE6-8:curEle.attachEvent(‘onclick’,function(){})
+一、共同的优点1、DOM0级和DOM2级的共同优点：能添加多个事件处理程序，按顺序执行，HTML事件处理程序无法做到~
+二、区别2、关于dom0级和dom2级的区别
+DOM0级事件处理：同时绑定几个不同的事件，
+例如在绑定onclick的基础上,
+再绑定一个onmouseover为按钮2设置背景颜色
+（这里注意onclick、onmouseover事件不能都设为alert弹出哦，可能会有冲突，造成dom0和dom2都不能成功）；
+但是不能同时绑定多个相同的事件，比如onclick；会覆盖，只会执行最后一个的函数；
+比如把onclick写在标签内，就是dom0级事件，fn和fn1依次执行;
+第二种获取元素，绑定onclick事件也是dom0级，第 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/06/07/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E3%80%81%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/06/07/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E3%80%81%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-06-07T07:37:35.579Z" title="Created 2022-06-07 15:37:35">2022-06-07</time></span></div><div class="content">事件捕获、事件冒泡和事件委托1.事件和事件流事件：用户点击、滑动、键盘输入等
+事件流：因为dom是一体的，事件触发的元素是相互嵌套的，会影响到其他元素，
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/10/28/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+2.事件捕获从上到下，点击目标不会马上触发，而是从上面流动到底部触发
 
 
 
 
-<script src="/js/script.js"></script>
+3.事件冒泡从下到上，点击目标会一层一层的向上触发。
+
+
+4.事件流的三个过程规定了事件流的三个过程
 
 
 
 
-  </div>
-</body>
-</html>
+
+
+
+
+5事件默认绑定到事件冒泡阶段阻止事件冒泡和传播
+123456789&lt;div @click.capture= &quot;gotoDeatails&quot;&gt;// vue中更改事件的默认绑定顺序，改为捕获。    aaaaaaaaaaa    &lt;button @click.stop =&quot;like&quot;&gt;// vue中在绑定事件后加.stop        bbbbbbbbb    &lt;/button&gt;// js 阻止事件捕获冒泡function click() &#123;	event.stopProopagation()&#125;
+
+6面试题1234567891011121314151 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/05/02/%E8%B7%A8%E5%9F%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/02/%E8%B7%A8%E5%9F%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-05-02T14:33:55.415Z" title="Created 2022-05-02 22:33:55">2022-05-02</time></span></div><div class="content">跨域，解决方法一、为什么出现跨域问题浏览器同源策略限制，是最核心的安全功能
+可以说web是建立在同源策略基础上的，同源策略会阻止一个域的JavaScript脚本和另外一个域的内容进行交互，
+同源，就是两个页面具有相同的协议（protocol），主机（host）和端口号（port）
+二、非同源限制1.无法读取非同源页面的Cookie，LocalStorage和IndexedDB
+2.无法接触非同源的DOM
+3.无法向非同源地址发送AJAX请求
+浏览器为了隔离潜在的恶意文件，使用同源策略，限制从一个源加载的文档或脚本和另一个源的资源进行交互（不同源之间的文档，资源的交互）;通俗的理解：浏览器规定，A 网站的 JavaScript，不允许和非同源的网站 C 之间，进行资源的交互，例如：
+ 所谓同源（即指在同一个域）就是两个页面的协议（protocol），主机（host）和端口号（port）”三者相同;注意：跨域限制访问，其实是浏览器的限制。 
+
+三、什么是跨域当一个请求url的协议，域名，端口三者之间任意一个与当前页面url不同的即为跨域
+
+
+
+当前页面url
+被请求页面url
+是否跨域
+原 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/03/12/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/03/12/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-12T02:43:32.932Z" title="Created 2022-03-12 10:43:32">2022-03-12</time></span></div><div class="content">js数据类型与堆栈内存在JavaScript中，它的内存分为三种类型：代码空间、栈空间、堆空间，其中代码空间用于存放可执行代码。
+本文带大家来深入理解下栈空间与堆空间（堆内存与栈内存）
+栈的认识概念栈也是一种数据呈线性排列的数据结构，
+入栈
+往栈中添加数据的操作就叫“入栈”，往栈中添加数据时，新数据被放在最上面。
+
+
+出栈
+从栈中取出数据的操作就叫“出栈”，从栈中取出数据时，会从最新的数据开始取。
+
+
+优点由于栈中存放数据的结构是后放进去的数据先取出来(后进先出)，针对一些操作需要取最新数据时，选择栈作为数据结构是最合适的。
+缺点访问栈中的任意数据时，就需要从最新的数据开始取，效率较低。
+栈内存空间栈内存空间 就是用栈作为数据结构在内存中所申请的空间。
+
+堆的认识堆的特点
+如图所示，每个节点由两个子节点，用线条连接即为堆。
+
+
+结点内的数字就是存储的数据
+
+堆中的每个结点最多有两个子节点
+
+树的形状取决于数据的个数
+
+节点的排列顺序为从上到下，同一行里则为从左到右
+
+堆的父节点必须小于子结点
+
+
+
+堆的数据存储
+在堆中存储数据时必须遵守这样一条规则：子结点必定大于父节点
+
+
+顶端的结点 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/07/24/JavaScript/" title="No title"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/24/JavaScript/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-24T06:23:23.016Z" title="Created 2021-07-24 14:23:23">2021-07-24</time></span></div><div class="content">5 js组成
+
+
+
+js三种书写位置
+
+javas输入输出语句
+变量变量得本质
+变量得使用
+
+
+
+
+
+
+变量得命名规范
+
+小结
+变量得数据类型
+基本数据类型
+
+
+
+
+
+
+数字类型转换
+
+
+
+递增和递减运算符
+ 
+比较运算符
+逻辑运算符
+
+
+
+流程控制流程控制
+顺序流程控制
+分支流程控制
+if语句
+
+if else语句
+
+
+​    
+三元表达式                                
+
+switch语句
+switch语句和if else if 语句的区别
+循环
+for循环执行顺序
+
+
+双重for循环
+
+while循环
+
+do while循环
+
+continue关键字
+break关键字
+命名规范和语法格式
+
+
+
+数组
+数组的概念
+
+利用数组字面量来创建数组
+数组的类型
+数组的索引
+数组的长度
+
+数组的新增元素修改length以及索引号
+
+修改数字索引新增
+
+案例分析使用循环来为数组赋值
+
+​    
+将数组中大于10的数组选出来组成新的数组
+反转数组案例
+
+冒泡排序
+函数
+函数的概念
+函数的使用
+
+函数的参数
+     
+
+函数的返回值—return
+
+作用域
+
+ ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/28/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/10/28/hello-world/" title="Hello World">Hello World</a><time datetime="2022-10-28T13:07:44.774Z" title="Created 2022-10-28 21:07:44">2022-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/28/%E9%97%AD%E5%8C%85/" title="闭包"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闭包"/></a><div class="content"><a class="title" href="/2022/10/28/%E9%97%AD%E5%8C%85/" title="闭包">闭包</a><time datetime="2022-10-28T04:00:00.000Z" title="Created 2022-10-28 12:00:00">2022-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="No title"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="No title">No title</a><time datetime="2022-10-16T09:15:52.045Z" title="Created 2022-10-16 17:15:52">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/01/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="No title"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2022/07/01/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="No title">No title</a><time datetime="2022-07-01T15:14:21.827Z" title="Created 2022-07-01 23:14:21">2022-07-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/18/dom0%E7%BA%A7%E5%92%8C2%E7%BA%A7%E4%BA%8B%E4%BB%B6/" title="No title"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2022/06/18/dom0%E7%BA%A7%E5%92%8C2%E7%BA%A7%E4%BA%8B%E4%BB%B6/" title="No title">No title</a><time datetime="2022-06-18T06:53:40.079Z" title="Created 2022-06-18 14:53:40">2022-06-18</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">July 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">June 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">May 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">March 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">July 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">9</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-10-28T14:32:27.296Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
