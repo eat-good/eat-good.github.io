@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>朽木 | 朽木</title><meta name="author" content="朽木"><meta name="copyright" content="朽木"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Javascript的单线程与多线程一、浏览器的线程和进程1.浏览器的线程一个浏览器通常由以下几个线程：  渲染引擎线程：负责页面的渲染  JS引擎线程：负责JS的解析和执行  定时触发器线程：处理定时事件，比如setTimeout，setInterval  事件触发线程：处理DOM事件  异步http请求线程：处理http请求 浏览器中有三个常驻的线程，分别是JS引擎线程、界面渲染线程、事件触发">
+<meta property="og:type" content="website">
+<meta property="og:title" content="朽木">
+<meta property="og:url" content="http://example.com/link/Javascript%E7%9A%84%E5%8D%95%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B.html">
+<meta property="og:site_name" content="朽木">
+<meta property="og:description" content="Javascript的单线程与多线程一、浏览器的线程和进程1.浏览器的线程一个浏览器通常由以下几个线程：  渲染引擎线程：负责页面的渲染  JS引擎线程：负责JS的解析和执行  定时触发器线程：处理定时事件，比如setTimeout，setInterval  事件触发线程：处理DOM事件  异步http请求线程：处理http请求 浏览器中有三个常驻的线程，分别是JS引擎线程、界面渲染线程、事件触发">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.4kbizhi.com/d/file/2023/02/28/small105131ETlVj1677552691.jpg">
+<meta property="article:published_time" content="2022-11-17T13:34:27.164Z">
+<meta property="article:modified_time" content="2022-11-17T13:34:27.164Z">
+<meta property="article:author" content="朽木">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.4kbizhi.com/d/file/2023/02/28/small105131ETlVj1677552691.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/link/Javascript%E7%9A%84%E5%8D%95%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '朽木',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2022-11-17 21:34:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="朽木"><span class="site-name">朽木</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">朽木</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h1 id="Javascript的单线程与多线程"><a href="#Javascript的单线程与多线程" class="headerlink" title="Javascript的单线程与多线程"></a>Javascript的单线程与多线程</h1><h3 id="一、浏览器的线程和进程"><a href="#一、浏览器的线程和进程" class="headerlink" title="一、浏览器的线程和进程"></a>一、浏览器的线程和进程</h3><h4 id="1-浏览器的线程"><a href="#1-浏览器的线程" class="headerlink" title="1.浏览器的线程"></a>1.浏览器的线程</h4><p>一个浏览器通常由以下几个线程：</p>
+<ul>
+<li><p>渲染引擎线程：负责页面的渲染</p>
+</li>
+<li><p>JS引擎线程：负责JS的解析和执行</p>
+</li>
+<li><p>定时触发器线程：处理定时事件，比如setTimeout，setInterval</p>
+</li>
+<li><p>事件触发线程：处理DOM事件</p>
+</li>
+<li><p>异步http请求线程：处理http请求</p>
+<p><strong>浏览器中有三个常驻的线程，分别是JS引擎线程、界面渲染线程、事件触发线程。</strong></p>
+</li>
+</ul>
+<p>需要注意的是，<strong>渲染线程和JS引擎线程是不能同时进行的</strong>。渲染线程在执行任务的时候，JS引擎线程会被挂起。因为JS可以操作DOM，若在渲染中JS处理了DOM，浏览器可能就混乱了。</p>
+<h4 id="2-浏览器是多进程的"><a href="#2-浏览器是多进程的" class="headerlink" title="2.浏览器是多进程的"></a>2.浏览器是多进程的</h4><p>Google或IE浏览器每打开一个tab标签页就会有一个子进程，具体可打开任务管理器查看。</p>
+<h3 id="二、Javascript是单线程的"><a href="#二、Javascript是单线程的" class="headerlink" title="二、Javascript是单线程的"></a>二、Javascript是单线程的</h3><p>浏览器端JavaScript是以单线程的方式执行的，也就是说JavaScript和UI渲染占用同一个主线程，那就意味着，如果JavaScript进行高负载的数据处理，UI渲染就很有可能被阻断，浏览器就会出现卡顿，降低了用户体验。</p>
+<h4 id="1-异步Ajax也是单线程的"><a href="#1-异步Ajax也是单线程的" class="headerlink" title="1.异步Ajax也是单线程的"></a>1.异步Ajax也是单线程的</h4><p>Ajax是单线程的，因为JavaScript是单线程的，Ajax属于JavaScript范畴，因此Ajax是单线程的。</p>
+<p>Ajax请求确实是异步的，JS引擎执行异步代码而不用等待，是因为有消息队列和事件循环，这请求是由浏览器新开一个线程请求。浏览器中很多行为是异步的，当一个异步事件发生的时候，它就进入事件队列，浏览器有一个内部的消息循环，Event Loop（事件循环），会轮询大的事件队列并处理事件，只有前面的处理完毕了，空闲了才会执行这个事件，而JavaScript引擎始终是单线程运行回调函数。</p>
+<h4 id="2-setInterval和setTimeout本质上并不是多线程"><a href="#2-setInterval和setTimeout本质上并不是多线程" class="headerlink" title="2.setInterval和setTimeout本质上并不是多线程"></a>2.setInterval和setTimeout本质上并不是多线程</h4><p>1.setTimeout，setInterval并不是多线程，只是一个定时的事件触发器，它们在合适的时间把一些JS代码塞到JS引擎的队列中。</p>
+<p>2.setTimeout(aFunction, 0)，这行代码看似的意思是在0秒之后执行aFunction, 但这并不意味着立即执行。其它真正的意思是立刻把aFunction的代码放到当前JS引擎的队列中。所以当前代码块执行完成之前，aFunction的代码是得不到执行的。</p>
+<p>3.在一个事件的响应代码执行完成之后，即使队列中有待执行的代码，浏览器也会先执行页面渲染和响应事件，完成之后再执行队列中的代码。</p>
+<h3 id="三、Web-Worker支持多线程"><a href="#三、Web-Worker支持多线程" class="headerlink" title="三、Web Worker支持多线程"></a>三、Web Worker支持多线程</h3><p>web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。</p>
+<h4 id="1-多线程间数据交互"><a href="#1-多线程间数据交互" class="headerlink" title="1.多线程间数据交互"></a>1.多线程间数据交互</h4><p>Web Worker线程和原本的JS线程互不影响.</p>
+<p>两个线程之间是通过onPostMessage 和 onMessage这两个函数来进行通讯的。其中onPostMessage（data）的参数是你要传递的数据，而onMessage是一个回调函数，只有在接受到数据时，onMessage会被回调，onMessage有一个隐藏的参数，那就是event，我们可以用event.data获取到传递过来的数据来更新主线程。</p>
+<h4 id="2-Web-Worker的兼容性"><a href="#2-Web-Worker的兼容性" class="headerlink" title="2.Web Worker的兼容性"></a>2.Web Worker的兼容性</h4><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\1668692014239.png" alt="1668692014239"></p>
+<h4 id="3-Web-Worker的使用限制"><a href="#3-Web-Worker的使用限制" class="headerlink" title="3.Web Worker的使用限制"></a>3.Web Worker的使用限制</h4><p>3.1同源限制<br>分配给Worker 线程运行的脚本文件（worker.js），必须与主线程的脚本文件(main.js)同源。</p>
+<p>3.2访问限制<br>Worker子线程所在的全局对象，与主线程不在同一个上下文环境，无法读取主线程所在网页的 DOM 对象，也无法使用document、window、parent这些对象，global对象的指向有变更，window需要改写成self，不能执行alert()方法和confirm()等方法，只能读取部分navigator对象内的数据。另外chrome的console.log()倒是可以使用，也支持debugger断点，增加调试的便利性。</p>
+<h4 id="4-Web-Worker的应用场景"><a href="#4-Web-Worker的应用场景" class="headerlink" title="4.Web Worker的应用场景"></a>4.Web Worker的应用场景</h4><p>1、使用专用线程进行数学运算<br>Web Worke设计的初衷就是用来做计算耗时任务，大数据的处理，而这种计算放在worker中并不会中断前台用户的操作，避免代码卡顿带来不必要的用户体验。例如处理ajax返回的大批量数据，读取用户上传文件，计算MD5，更改canvas的位图的过滤，分析视频和声频文件等。worker中除了缺失了DOM和BOM操作能力以外，还是拥有非常强大的js逻辑运算处理的能力的，相当于nodejs一个级别的的运行环境。</p>
+<p>2、高频的用户交互<br>高频的用户交互适用于根据用户的输入习惯、历史记录以及缓存等信息来协助用户完成输入的纠错、校正功能等类似场景，用户频繁输入的响应处理同样可以考虑放在web worker中执行。例如，我们可以 做一个像Word一样的应用：当用户打字时后台在词典中进行查找，帮助用户自动纠错等等。</p>
+<p>3、数据的预取<br>对于一些有大量数据的前后台交互产品，可以新开一个线程专门用来进行数据的预取和缓冲数据，本地web数据库的行写入和更改，长时间持续的运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断，也有利于随时响应主线程的通信。也可以配合XMLHttpRequest和websocket进行不断开的通信，实现守卫进程。</p>
+<p>最后，web worker有了多线程的形（有了多线程的用法），但还不具备多线程的神（不具备线程通信、锁等后台线程的基本特性），web worker的本质是支持我们把数据刷新与页面渲染两个动作拆开执行（不使用web worker的话这两个动作在主线程中是线性执行的）。</p>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">朽木</div><div class="author-info__description">技术类个人博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/eat-good" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shayeqibuliao@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8E%E7%BB%A7%E6%89%BF/" title="无题"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8E%E7%BB%A7%E6%89%BF/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.663Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E3%80%81%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" title="无题"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E3%80%81%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.658Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="无题"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.654Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E8%B7%A8%E5%9F%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E8%B7%A8%E5%9F%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.623Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="无题"><img src="/img/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.618Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-08T13:56:16.543Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 朽木</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

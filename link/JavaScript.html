@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>朽木 | 朽木</title><meta name="author" content="朽木"><meta name="copyright" content="朽木"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="5 js组成    js三种书写位置  javas输入输出语句 变量变量得本质 变量得使用       变量得命名规范  小结 变量得数据类型 基本数据类型       数字类型转换    递增和递减运算符   比较运算符 逻辑运算符    流程控制流程控制 顺序流程控制 分支流程控制 if语句  if else语句   ​	 三元表达式								  switch语句 switch语句和if">
+<meta property="og:type" content="website">
+<meta property="og:title" content="朽木">
+<meta property="og:url" content="http://example.com/link/JavaScript.html">
+<meta property="og:site_name" content="朽木">
+<meta property="og:description" content="5 js组成    js三种书写位置  javas输入输出语句 变量变量得本质 变量得使用       变量得命名规范  小结 变量得数据类型 基本数据类型       数字类型转换    递增和递减运算符   比较运算符 逻辑运算符    流程控制流程控制 顺序流程控制 分支流程控制 if语句  if else语句   ​	 三元表达式								  switch语句 switch语句和if">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.4kbizhi.com/d/file/2023/03/02/small094507od61B1677721507.jpg">
+<meta property="article:published_time" content="2022-10-28T14:18:59.245Z">
+<meta property="article:modified_time" content="2021-07-31T14:31:02.324Z">
+<meta property="article:author" content="朽木">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.4kbizhi.com/d/file/2023/03/02/small094507od61B1677721507.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/link/JavaScript.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '朽木',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2021-07-31 22:31:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="朽木"><span class="site-name">朽木</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">朽木</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h1 id="5-js组成"><a href="#5-js组成" class="headerlink" title="5 js组成"></a>5 js组成</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724142504553.png" alt="image-20210724142504553"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724142619202.png" alt="image-20210724142619202"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724142715657.png" alt="image-20210724142715657"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724142739773.png" alt="image-20210724142739773"></p>
+<h1 id="js三种书写位置"><a href="#js三种书写位置" class="headerlink" title="js三种书写位置"></a>js三种书写位置</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724143533263.png" alt="image-20210724143533263"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724143552368.png" alt="image-20210724143552368"><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724143615130.png" alt="image-20210724143615130"></p>
+<h1 id="javas输入输出语句"><a href="#javas输入输出语句" class="headerlink" title="javas输入输出语句"></a>javas输入输出语句</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724151043949.png" alt="image-20210724151043949"></p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="变量得本质"><a href="#变量得本质" class="headerlink" title="变量得本质"></a>变量得本质</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724153209319.png" alt="image-20210724153209319"></p>
+<p>变量得使用</p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724154143196.png" alt="image-20210724154143196"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724154450529.png" alt="image-20210724154450529"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724154604247.png" alt="image-20210724154604247"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724155852445.png" alt="image-20210724155852445"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724160012615.png" alt="image-20210724160012615"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724160347140.png" alt="image-20210724160347140"><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724160449731.png" alt="image-20210724160449731"></p>
+<h2 id="变量得命名规范"><a href="#变量得命名规范" class="headerlink" title="变量得命名规范"></a>变量得命名规范</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724164755774.png" alt="image-20210724164755774"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724165037699.png" alt="image-20210724165037699"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724165903734.png" alt="image-20210724165903734"></p>
+<h2 id="变量得数据类型"><a href="#变量得数据类型" class="headerlink" title="变量得数据类型"></a>变量得数据类型</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724170354620.png" alt="image-20210724170354620"></p>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724171243217.png" alt="image-20210724171243217"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724201602105.png" alt="image-20210724201602105"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724202915915.png" alt="image-20210724202915915"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210724203047568.png" alt="image-20210724203047568"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726102946114.png" alt="image-20210726102946114"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726103529629.png" alt="image-20210726103529629"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726141443371.png" alt="image-20210726141443371"></p>
+<h1 id="数字类型转换"><a href="#数字类型转换" class="headerlink" title="数字类型转换"></a>数字类型转换</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726142641582.png"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726155157563.png" alt="image-20210726155157563"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726170613032.png" alt="image-20210726170613032"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726172305211.png" alt="image-20210726172305211"></p>
+<h1 id="递增和递减运算符"><a href="#递增和递减运算符" class="headerlink" title="递增和递减运算符"></a>递增和递减运算符</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726210900226.png" alt="image-20210726210900226"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727094306188.png" alt="image-20210727094306188"> </p>
+<h1 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726211641310.png" alt="image-20210726211641310"></p>
+<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210726214217345.png" alt="image-20210726214217345"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727094027626.png" alt="image-20210727094027626"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727094833565.png" alt="image-20210727094833565"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727103538854.png" alt="image-20210727103538854"></p>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><h2 id="流程控制-1"><a href="#流程控制-1" class="headerlink" title="流程控制"></a>流程控制</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727140553344.png" alt="image-20210727140553344"></p>
+<h3 id="顺序流程控制"><a href="#顺序流程控制" class="headerlink" title="顺序流程控制"></a>顺序流程控制</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727140733107.png" alt="image-20210727140733107"></p>
+<h3 id="分支流程控制"><a href="#分支流程控制" class="headerlink" title="分支流程控制"></a>分支流程控制</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727141449530.png" alt="image-20210727141449530"></p>
+<h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727141329855.png" alt="image-20210727141329855"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727141613847.png" alt="image-20210727141613847"></p>
+<h4 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if else语句"></a>if else语句</h4><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727151751784.png" alt="image-20210727151751784"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727151827584.png" alt="image-20210727151827584"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727160810248.png" alt="image-20210727160810248"></p>
+<p>​	<img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727161004338.png" alt="image-20210727161004338"></p>
+<h3 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727163806444.png" alt="image-20210727163806444">								</p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729085127914.png" alt="image-20210729085127914"></p>
+<h3 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727165015238.png" alt="image-20210727165015238"></p>
+<h3 id="switch语句和if-else-if-语句的区别"><a href="#switch语句和if-else-if-语句的区别" class="headerlink" title="switch语句和if else if 语句的区别"></a>switch语句和if else if 语句的区别</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727170434574.png" alt="image-20210727170434574"></p>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727202158451.png" alt="image-20210727202158451"></p>
+<h2 id="for循环执行顺序"><a href="#for循环执行顺序" class="headerlink" title="for循环执行顺序"></a>for循环执行顺序</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727203342936.png" alt="image-20210727203342936"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727203420662.png" alt="image-20210727203420662"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210727203730974.png" alt="image-20210727203730974"></p>
+<h2 id="双重for循环"><a href="#双重for循环" class="headerlink" title="双重for循环"></a>双重for循环</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728094500243.png" alt="image-20210728094500243"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728112733088.png" alt="image-20210728112733088"></p>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728140920606.png" alt="image-20210728140920606"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728140957795.png" alt="image-20210728140957795"></p>
+<h2 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do while循环"></a>do while循环</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728141712547.png" alt="image-20210728141712547"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728142653625.png" alt="image-20210728142653625"></p>
+<h2 id="continue关键字"><a href="#continue关键字" class="headerlink" title="continue关键字"></a>continue关键字</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728143335542.png" alt="image-20210728143335542"></p>
+<h2 id="break关键字"><a href="#break关键字" class="headerlink" title="break关键字"></a>break关键字</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728144004052.png" alt="image-20210728144004052"></p>
+<h2 id="命名规范和语法格式"><a href="#命名规范和语法格式" class="headerlink" title="命名规范和语法格式"></a>命名规范和语法格式</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728143932124.png" alt="image-20210728143932124"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728144359803.png" alt="image-20210728144359803"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728144530964.png" alt="image-20210728144530964"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728144607004.png" alt="image-20210728144607004"></p>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728145000627.png" alt="image-20210728145000627"></p>
+<h2 id="数组的概念"><a href="#数组的概念" class="headerlink" title="数组的概念"></a>数组的概念</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728145634942.png" alt="image-20210728145634942"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728153320506.png" alt="image-20210728153320506"></p>
+<h2 id="利用数组字面量来创建数组"><a href="#利用数组字面量来创建数组" class="headerlink" title="利用数组字面量来创建数组"></a>利用数组字面量来创建数组</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728153330090.png" alt="image-20210728153330090"></p>
+<h2 id="数组的类型"><a href="#数组的类型" class="headerlink" title="数组的类型"></a>数组的类型</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728153412906.png" alt="image-20210728153412906"></p>
+<h2 id="数组的索引"><a href="#数组的索引" class="headerlink" title="数组的索引"></a>数组的索引</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728154605933.png" alt="image-20210728154605933"></p>
+<h2 id="数组的长度"><a href="#数组的长度" class="headerlink" title="数组的长度"></a>数组的长度</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728172726475.png" alt="image-20210728172726475"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210728172653215.png" alt="image-20210728172653215"></p>
+<h2 id="数组的新增元素"><a href="#数组的新增元素" class="headerlink" title="数组的新增元素"></a>数组的新增元素</h2><h3 id="修改length以及索引号"><a href="#修改length以及索引号" class="headerlink" title="修改length以及索引号"></a>修改length以及索引号</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729094936874.png" alt="image-20210729094936874"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729095420631.png" alt="image-20210729095420631"></p>
+<p>修改数字索引新增</p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729095526692.png" alt="image-20210729095526692"></p>
+<h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><h4 id="使用循环来为数组赋值"><a href="#使用循环来为数组赋值" class="headerlink" title="使用循环来为数组赋值"></a>使用循环来为数组赋值</h4><p><strong><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729110758781.png" alt="image-20210729110758781"></strong></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729110811568.png" alt="image-20210729110811568"></p>
+<p>​    </p>
+<h4 id="将数组中大于10的数组选出来组成新的数组"><a href="#将数组中大于10的数组选出来组成新的数组" class="headerlink" title="将数组中大于10的数组选出来组成新的数组"></a>将数组中大于10的数组选出来组成新的数组</h4><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729113013901.png" alt="image-20210729113013901"></p>
+<h4 id="反转数组案例"><a href="#反转数组案例" class="headerlink" title="反转数组案例"></a>反转数组案例</h4><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729141623528.png" alt="image-20210729141623528"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729141609340.png" alt="image-20210729141609340"></p>
+<h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729143053097.png" alt="image-20210729143053097"></p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729201615803.png" alt="image-20210729201615803"></p>
+<h2 id="函数的概念"><a href="#函数的概念" class="headerlink" title="函数的概念"></a>函数的概念</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729201723365.png" alt="image-20210729201723365"></p>
+<h2 id="函数的使用"><a href="#函数的使用" class="headerlink" title="函数的使用"></a>函数的使用</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729201831565.png" alt="image-20210729201831565"><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729201855969.png" alt="image-20210729201855969"><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729201912939.png" alt="image-20210729201912939"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729202009071.png" alt="image-20210729202009071"></p>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729201548213.png" alt="image-20210729201548213"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729203536229.png" alt="image-20210729203536229">	 <img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729203600512.png" alt="image-20210729203600512"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729203629708.png" alt="image-20210729203629708"></p>
+<h2 id="函数的返回值—return"><a href="#函数的返回值—return" class="headerlink" title="函数的返回值—return"></a>函数的返回值—return</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729213353914.png" alt="image-20210729213353914"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210729213207680.png" alt="image-20210729213207680"></p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730111147504.png" alt="image-20210730111147504"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730113558569.png" alt="image-20210730113558569"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730113714485.png" alt="image-20210730113714485"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730141353704.png" alt="image-20210730141353704"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730141413054.png" alt="image-20210730141413054"><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730141531504.png" alt="image-20210730141531504"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730141559050.png" alt="image-20210730141559050"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730142531636.png" alt="image-20210730142531636"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730142703622.png" alt="image-20210730142703622"></p>
+<h2 id="js预解析"><a href="#js预解析" class="headerlink" title="js预解析"></a>js预解析</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730144553941.png" alt="image-20210730144553941"></p>
+<h3 id="提升案例"><a href="#提升案例" class="headerlink" title="提升案例"></a>提升案例</h3><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730145225842.png" alt="image-20210730145225842"> <img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730145107427.png" alt="image-20210730145107427"></p>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730152726889.png" alt="image-20210730152726889"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730153001684.png" alt="image-20210730153001684"></p>
+<h2 id="利用字面量来创建对象"><a href="#利用字面量来创建对象" class="headerlink" title="利用字面量来创建对象"></a>利用字面量来创建对象</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730164635076.png" alt="image-20210730164635076"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730164845650.png" alt="image-20210730164845650"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730181801106.png" alt="image-20210730181801106"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730181820198.png" alt="image-20210730181820198"></p>
+<h2 id="利用obj创建对象"><a href="#利用obj创建对象" class="headerlink" title="利用obj创建对象"></a>利用obj创建对象</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730182555021.png" alt="image-20210730182555021"></p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730194145018.png" alt="image-20210730194145018"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730201610330.png" alt="image-20210730201610330"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730203005712.png" alt="image-20210730203005712"></p>
+<p> <img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730204122652.png" alt="image-20210730204122652"></p>
+<h2 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h2><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730204708584.png" alt="image-20210730204708584"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730204725307.png" alt="image-20210730204725307"></p>
+<p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730205007163.png" alt="image-20210730205007163"></p>
+<h1 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h1><p><img src="C:\Users\GH\AppData\Roaming\Typora\typora-user-images\image-20210730205430618.png" alt="image-20210730205430618"> 	</p>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">朽木</div><div class="author-info__description">技术类个人博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/eat-good" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shayeqibuliao@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8E%E7%BB%A7%E6%89%BF/" title="无题"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8E%E7%BB%A7%E6%89%BF/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.663Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E3%80%81%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" title="无题"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E3%80%81%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.658Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="无题"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3for%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.654Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E8%B7%A8%E5%9F%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E8%B7%A8%E5%9F%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.623Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/08/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="无题"><img src="/img/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/03/08/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" title="无题">无题</a><time datetime="2023-03-08T13:39:03.618Z" title="发表于 2023-03-08 21:39:03">2023-03-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-08T13:56:16.543Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 朽木</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
